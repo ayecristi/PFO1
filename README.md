@@ -18,10 +18,10 @@ Este proyecto consiste en el desarrollo de un portafolio personal interactivo de
 - [x] Archivo "README.md" creado, que incluya una breve descripción del TP y este checklist.
 
 #### • Repositorio y Publicación:
-- [] Repositorio en GitHub creado.
-- [] Proyecto subido al repositorio.
-- [] Proyecto publicado utilizando GitHub Pages.
-- [] **URL de GitHub Pages:** [PONER ACÁ EL LINK DE TU PÁGINA]
+- [x] Repositorio en GitHub creado.
+- [x] Proyecto subido al repositorio.
+- [x] Proyecto publicado utilizando GitHub Pages.
+- [x] https://github.com/ayecristi/PFO1
 
 #### • Uso de Google Fonts:
 - [x] Enlace a Google Fonts incluido en la sección "head" del HTML.

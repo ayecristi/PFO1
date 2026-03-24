@@ -437,3 +437,80 @@ footer {
     margin-top: 1rem;
     font-weight: 400 !important;
 }
+
+/* =========================================
+   ESTILOS RESPONSIVOS (PARA CELULARES)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Ajustes Generales */
+    body {
+        overflow-x: hidden; /* Evita el movimiento lateral */
+    }
+
+    header h1 {
+        font-size: 1.8rem !important;
+        padding: 10px;
+    }
+
+    /* 2. Sección Sobre Mí: De 2 columnas a 1 columna */
+    #sobre-mi {
+        display: flex !important;
+        flex-direction: column !important; /* Apila la foto arriba y el texto abajo */
+        align-items: center !important;
+        padding: 20px !important;
+        gap: 20px;
+    }
+
+    .img-container {
+        width: 100% !important;
+        max-width: 300px; /* Que la foto no sea gigante en el celu */
+    }
+
+    .img-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenedor-texto-sobremi {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    /* 3. Bloque fucsia: que no se desborde */
+    .bloque-fucsia-destacado {
+        width: 100% !important;
+        margin: 15px 0 !important;
+        padding: 15px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* 4. Proyectos: Si usaste Flexbox, esto los apila */
+    .contenedor-proyectos-canva {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .card-proyecto {
+        width: 95% !important;
+    }
+
+    /* 5. Spotify: Que ocupe todo el ancho */
+    .divisor-musical, .contenedor-spotify {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    /* 6. Habilidades: Que fluyan mejor */
+    .skills-list {
+        justify-content: center !important;
+        padding: 0;
+    }
+
+    .skill-tag {
+        font-size: 0.8rem !important;
+        padding: 8px 12px !important;
+    }
+}
