@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal</title>
+    <link rel="stylesheet" href="css/styless.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Cabecera principal: Título destacado con sombras sólidas y variables CSS para mantener la coherencia del estilo Gummy. -->
+    <header>
+        <h1>AYELÉN | FULL STACK DEV</h1>
+    </header>
+
+    <!-- Navegación principal: Uso de Flexbox para distribuir los enlaces uniformemente -->
+    <nav>
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#tarjetas">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección Presentación: Estructura de dos columnas utilizando Flexbox y control de proporciones en la imágen. -->
+        <section id="sobre-mi">
+            <div class="img-container">
+                <img src="img/perfil.jpg" alt="Tocando con Misterioso Chocolate">
+            </div>
+
+            <div class="contenedor-texto-sobremi">
+                <div class="bloque-texto-principal">
+                    <h2>AYELÉN | FULL STACK DEV</h2>
+                    <p>Soy una desarrolladora full stack apasionada por crear soluciones innovadoras y eficientes. Mi
+                        misión es transformar problemas complejos en software escalable, integrando la potencia de Java
+                        con interfaces modernas.
+                        Además de mi pasión por la tecnología, me encanta la música y el teatro, que son mis fuentes de
+                        inspiración para mantener la creatividad en mi trabajo diario.
+                    </p>
+                </div>
+
+                <div class="bloque-fucsia-destacado">
+                    <p>Además, formo parte de una banda indie llamada <strong>"Misterioso Chocolate"</strong>.</br>
+                        Y vivo con mi perrito, <strong>Oliver</strong>.</p>
+                </div>
+            </div>
+             </section>
+
+            <!-- Separador de audio: Elemento independiente fuera del flujo Flexbox para evitar desajustes en el layout -->
+            <aside class="divisor-musical">
+                <div class="contenedor-spotify">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/46GS7Jtetj1L6PiycMbzNJ?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </aside>
+
+        <section id="tarjetas">
+            <h2>Proyectos Destacados</h2>
+            <div class="contenedor-proyectos-canva">
+
+                <article class="card-proyecto proyecto-violeta">
+                    <div class="icono-card">
+                        <img src="img/icono-code.png" alt="Icono Objetivo">
+                    </div>
+                    <div class="contenido-card">
+                        <h3>Pago de Haberes</h3>
+                        <ul>
+                            <li>Desarrollo end-to-end de un sistema de procesamiento
+                                masivo de archivos para alta de cuentas sueldo
+                                mediante Java 8</li>
+                            <li>Optimización de procesos internos bancarios -> BPM</li>
+                            <li>Integración y orquestación de servicios bancarios con
+                                BPM, asegurando trazabilidad y reglas de negocio.
+                                Implementación de REST APIs (Spring Boot) y frontend
+                                en Angular para el módulo de bancarización.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card-proyecto proyecto-rosa">
+                    <div class="icono-card">
+                        <img src="img/icono-code2.png" alt="Icono Ojo">
+                    </div>
+                    <div class="contenido-card">
+                        <h3>Motor de Calificaciones</h3>
+                        <ul>
+                            <li>Mantenimiento evolutivo y resolución de incidencias en
+                                el motor de calificaciones online.</li>
+                            <li>Optimización de interfaces en Angular y ajustes de
+                                lógica backend con Java 8 / Spring Boot.</li>
+                            <li> Resolución de errores críticos (Hotfixes) en entornos de
+                                producción.</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades & Hobbies</h2>
+            <!-- Listado de Habilidades: Elementos de lista estilizados como botones físicos con transiciones de transformación al pasar el mouse. -->
+            <ul class="skills-list">
+                <li class="skill-tag tag-purple">Java</li>
+                <li class="skill-tag tag-pink">Spring Boot</li>
+                <li class="skill-tag tag-lime">Oracle</li>
+                <li class="skill-tag tag-cyan">Angular</li>
+                <li class="skill-tag tag-purple">SQL</li>
+                <li class="skill-tag tag-pink">Git</li>
+                <li class="skill-tag tag-lime">Guitarra</li>
+                <li class="skill-tag tag-purple">Cantante</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>¡Hablemos!</h2>
+            <!-- Formulario de contacto: Uso de atributos required en los inputs para aplicar validación nativa y obligatoria desde el navegador HTML5. -->
+            <form>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="tel" name="tel" placeholder="Teléfono" required>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <!-- Grilla de películas: Implementación de CSS Grid con auto-fit para responsividad automática -->
+        <section id="peliculas">
+            <h2>Top 3 Mejores Películas</h2>
+            <div class="contenedor-tarjetas">
+                <article class="proyecto-card">
+                    <h3>Twelve Monkeys</h3>
+                    <img src="img/peli1.jpg" alt="Poster de Twelve Monkeys">
+                    <p>Un rompecabezas temporal brillante.</p>
+                </article>
+                <article class="proyecto-card">
+                    <h3>Fight Club</h3>
+                    <img src="img/peli2.jpg" alt="Poster de Fight Club">
+                    <p>Crítica ácida al consumismo con una estética visual cruda y directa.</p>
+                </article>
+                <article class="proyecto-card">
+                    <h3>Fear and loathing in Las Vegas</h3>
+                    <img src="img/peli3.jpg" alt="Poster de Fear and loathing in Las Vegas">
+                    <p>Un viaje psicodélico y visualmente disruptivo que rompe con todas las reglas.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <p>Encontrame en mis redes:</p>
+            <div class="redes-sociales">
+                <a href="https://github.com/ayecristi" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/ayelen-cristi/" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/misterioso.chocolate" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <p class="copyright">Ayelén &copy; 2026 - Hecho con código y rock.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
