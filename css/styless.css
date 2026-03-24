@@ -453,18 +453,33 @@ footer {
         padding: 10px;
     }
 
-    /* 2. Sección Sobre Mí: De 2 columnas a 1 columna */
+    
     #sobre-mi {
         display: flex !important;
-        flex-direction: column !important; /* Apila la foto arriba y el texto abajo */
+        flex-direction: column !important;
         align-items: center !important;
         padding: 20px !important;
         gap: 20px;
     }
 
+    .contenedor-presentacion, .img-container {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+    
+    .contenedor-presentacion img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .contenedor-texto-sobremi {
+        width: 100% !important;
+        text-align: center;
+    }
+
     .img-container {
         width: 100% !important;
-        max-width: 300px; /* Que la foto no sea gigante en el celu */
+        max-width: 300px;
     }
 
     .img-container img {
@@ -477,7 +492,7 @@ footer {
         text-align: center;
     }
 
-    /* 3. Bloque fucsia: que no se desborde */
+   
     .bloque-fucsia-destacado {
         width: 100% !important;
         margin: 15px 0 !important;
@@ -485,7 +500,6 @@ footer {
         font-size: 0.9rem !important;
     }
 
-    /* 4. Proyectos: Si usaste Flexbox, esto los apila */
     .contenedor-proyectos-canva {
         display: flex !important;
         flex-direction: column !important;
@@ -497,13 +511,11 @@ footer {
         width: 95% !important;
     }
 
-    /* 5. Spotify: Que ocupe todo el ancho */
     .divisor-musical, .contenedor-spotify {
         width: 100% !important;
         padding: 10px !important;
     }
 
-    /* 6. Habilidades: Que fluyan mejor */
     .skills-list {
         justify-content: center !important;
         padding: 0;
