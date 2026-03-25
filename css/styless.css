@@ -53,11 +53,11 @@ main {
 }
 
 /* =========================================
-   HEADER & NAV PULIDO
+   HEADER & NAV
    ========================================= */
 header {
     text-align: center;
-    padding: 2rem 0 1rem 0; 
+    padding: 1.5rem 0 0.5rem 0;
     background-color: var(--bg-dark);
 }
 
@@ -120,12 +120,13 @@ nav a:hover::after {
 
 .img-container {
     flex: 1;
-    max-width: 350px;
+    max-width: 450px;
     width: 100%;
     border: 10px solid var(--accent-purple);
     border-radius: 40px;
     padding: 10px;
     box-shadow: 12px 12px 0px var(--black);
+    transform: translate(-20px);
 }
 
 .img-container img {
@@ -153,7 +154,7 @@ nav a:hover::after {
     box-shadow: 10px 10px 0px var(--black);
     max-width: 450px;
     margin-left: auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .divisor-musical {
