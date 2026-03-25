@@ -28,6 +28,17 @@ body {
     line-height: 1.6;
     padding: 10px;
 }
+/* =========================================
+   2. SCROLL NAV
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
 
 /* =========================================
    2. ESTRUCTURA (MAIN Y NAV)
@@ -490,11 +501,6 @@ footer {
     .contenedor-texto-sobremi {
         width: 100%;
         text-align: center;
-    }
-
-    .img-container {
-        
-        max-width: 350px;
     }
 
     .img-container img {
