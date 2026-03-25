@@ -26,7 +26,7 @@ body {
     font-family: 'Public Sans', sans-serif;
     color: var(--text-main);
     line-height: 1.6;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* =========================================
@@ -108,7 +108,9 @@ nav a:hover::after {
 }
 
 .img-container {
-    flex: 0 0 350px;
+    flex: 1;
+    max-width: 350px;
+    width: 100%;
     border: 10px solid var(--accent-purple);
     border-radius: 40px;
     padding: 10px;
@@ -117,7 +119,7 @@ nav a:hover::after {
 
 .img-container img {
     width: 100%;
-    height: 300px; 
+    height: auto; 
     border-radius: 30px;
     display: block;
     object-fit: cover;
@@ -178,9 +180,9 @@ nav a:hover::after {
 }
 
 .sticker-oliver img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 
@@ -203,7 +205,8 @@ nav a:hover::after {
 
 .card-proyecto {
     position: relative;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     padding: 4.5rem 2rem 2rem 2rem;
     border: 3px solid var(--black);
     border-radius: 40px;
@@ -221,7 +224,7 @@ nav a:hover::after {
     left: 40px;
     width: 85px;
     height: 85px;
-    background-color: white !important; 
+    background-color: white; 
     border: 3px solid var(--black);
     border-radius: 20px;
     display: flex;
@@ -233,9 +236,9 @@ nav a:hover::after {
 }
 
 .icono-card img {
-    width: 70% !important; 
-    height: 70% !important;
-    object-fit: contain !important;
+    width: 70%; 
+    height: 70%;
+    object-fit: contain;
     display: block;
 }
 
@@ -432,10 +435,10 @@ footer {
 }
 
 .copyright {
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
     color: #666;
     margin-top: 1rem;
-    font-weight: 400 !important;
+    font-weight: 400;
 }
 
 /* =========================================
@@ -443,86 +446,94 @@ footer {
    ========================================= */
 
 @media (max-width: 768px) {
-    /* 1. Ajustes Generales */
+    main {
+        padding: 2rem 1rem;
+    }
+
     body {
-        overflow-x: hidden; /* Evita el movimiento lateral */
+        overflow-x: hidden;
+        padding: 20px;
     }
 
     header h1 {
-        font-size: 1.8rem !important;
+        font-size: 1.8rem;
         padding: 10px;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
     
     #sobre-mi {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 20px !important;
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #tarjetas,
+    #habilidades,
+    #sobre-mi {
+        margin-bottom: 3rem;
     }
 
     .contenedor-presentacion, .img-container {
-        width: 100% !important;
-        max-width: 320px !important;
+        width: 100%;
+        max-width: 320px;
     }
     
     .contenedor-presentacion img {
-        width: 100% !important;
-        height: auto !important;
+        width: 100%;
+        height: auto;
     }
 
     .contenedor-texto-sobremi {
-        width: 100% !important;
+        width: 100%;
         text-align: center;
     }
 
     .img-container {
-        width: 100% !important;
-        max-width: 300px;
+        
+        max-width: 350px;
     }
 
     .img-container img {
         width: 100%;
         height: auto;
     }
-
-    .contenedor-texto-sobremi {
-        width: 100% !important;
-        text-align: center;
-    }
-
    
     .bloque-fucsia-destacado {
-        width: 100% !important;
-        margin: 15px 0 !important;
-        padding: 15px !important;
-        font-size: 0.9rem !important;
+        width: 100%;
+        margin: 15px 0;
+        padding: 15px;
+        font-size: 0.9rem;
     }
 
     .contenedor-proyectos-canva {
-        display: flex !important;
-        flex-direction: column !important;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 30px;
     }
 
-    .card-proyecto {
-        width: 95% !important;
-    }
-
     .divisor-musical, .contenedor-spotify {
-        width: 100% !important;
-        padding: 10px !important;
+        width: 100%;
+        padding: 10px;
     }
 
     .skills-list {
-        justify-content: center !important;
+        justify-content: center;
         padding: 0;
     }
 
     .skill-tag {
-        font-size: 0.8rem !important;
-        padding: 8px 12px !important;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 }
