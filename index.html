@@ -1,99 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<!-- Configuración inicial del documento: metadatos, fuentes externas (Space Mono para la estética Cyberpunk) y vinculación de la hoja de estilos. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Personal</title>
-    <link rel="stylesheet" href="css/styless.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;900&display=swap" rel="stylesheet">
+    <title>Ayelén Cristi | Portfolio Full Stack Dev</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Cabecera principal: Título destacado con sombras sólidas y variables CSS para mantener la coherencia del estilo Gummy. -->
-    <header>
-        <h1>AYELÉN | FULL STACK DEV</h1>
-    </header>
-
-    <!-- Navegación principal: Uso de Flexbox para distribuir los enlaces uniformemente -->
-    <nav>
-        <ul>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#tarjetas">Proyectos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#peliculas">Películas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <!-- Sección Presentación: Estructura de dos columnas utilizando Flexbox y control de proporciones en la imágen. -->
-        <section id="sobre-mi">
-            <div class="img-container">
-                <img src="img/perfil.jpg" alt="Tocando con Misterioso Chocolate">
+        <!-- Barra de navegación. Se utiliza Flexbox en el CSS para centrar los enlaces y distribuir el espacio uniformemente. -->
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">home</a></li>
+                <li><a href="#tarjetas">proyectos</a></li>
+                <li><a href="#habilidades">skills</a></li>
+                <li><a href="#peliculas">pelis</a></li>
+                <li><a href="#contacto">contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección principal. Contiene la presentación personal y la estructura inicial del layout Cyberpunk. -->
+
+        <section id="sobre-mi" class="seccion-presentacion">
+            
+            <div class="forma asterisco">✦</div>
+
+            <div class="texto-presentacion">
+                <h1>ayelén cristi <br>full stack <span class="highlight-lime">dev_</span></h1>
+                
+                <p class="descripcion-presentacion">
+                    Soy una desarrolladora full stack apasionada por crear soluciones innovadoras y eficientes.<br><br>
+                    Mi misión es transformar problemas complejos en software escalable, integrando la potencia de Java con interfaces modernas.
+                </p>
+
+                <div class="bloque-personal">
+                    > misterioso_chocolate // indie_band<br>
+                    > oliver // puppy
+                </div>
+
+                <!-- Implementación del Checkbox Hack. Se utiliza un input oculto combinado con el pseudo-selector CSS :checked para abrir y cerrar la consola sin necesidad de utilizar JavaScript. -->
+                <input type="checkbox" id="toggle-terminal" class="hack-checkbox">
+                
+                <label for="toggle-terminal" class="btn-read-more">
+                    <span class="texto-abrir">read more_</span>
+                    <span class="texto-cerrar">close_terminal_</span>
+                </label>
+
+                <div class="consola-tech">
+                    <div class="consola-header">
+                        <span class="punto rojo"></span>
+                        <span class="punto amarillo"></span>
+                        <span class="punto verde"></span>
+                        <span class="consola-titulo">bash - root@ayecristi:~</span>
+                    </div>
+                    <div class="consola-body">
+                        <p><span class="prompt">root@ayecristi:~$</span> ./load_bio.sh</p>
+                        <div class="consola-output">
+                            <p>> Cargando base de datos... [OK]</p>
+                            <p>> Status: Cursando la Tecnicatura Superior en Desarrollo de Software.</p>
+                            <p>> Background: Más de 3 años de experiencia trabajando en la industria.</p>
+                            <p>> Other_skills: Canto y toco la guitarra.</p>
+                            <p>> Ejecución finalizada con éxito.</p>
+                        </div>
+                        <p><span class="prompt">root@ayecristi:~$</span> <span class="cursor-blink">_</span></p>
+                    </div>
+                </div>
             </div>
 
-            <div class="contenedor-texto-sobremi">
-                <div class="bloque-texto-principal">
-                    <h2>SOBRE MÍ</h2>
-                    <p>Soy una desarrolladora full stack apasionada por crear soluciones innovadoras y eficientes.</p>
-                    <p>Mi misión es transformar problemas complejos en software escalable, integrando la potencia de Java con interfaces modernas.</p>
-                </div>
-
-                <div class="bloque-fucsia-destacado">
-                    <p>Además, formo parte de una banda indie llamada <strong>"Misterioso Chocolate"</strong>.</br>
-                        Y vivo con mi perrito, <strong>Oliver</strong>.</p>
-                </div>
+            <div class="foto-presentacion">
+                <img src="img/perfil.jpg" alt="Ayelén tocando teclado con Misterioso Chocolate">
             </div>
-             </section>
 
-            <!-- Separador de audio: Elemento independiente fuera del flujo Flexbox para evitar desajustes en el layout -->
-            <aside class="divisor-musical">
-                <div class="contenedor-spotify">
-                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/46GS7Jtetj1L6PiycMbzNJ?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </aside>
+        </section>
 
+        <!-- Divisor visual e interactivo: iframe incrustado de Spotify para compartir un poco de mi perfil musical con la banda. -->
+        <section class="divisor-musical">
+            <div class="contenedor-spotify">
+                <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/track/46GS7Jtetj1L6PiycMbzNJ?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Sección de proyectos. El layout está construido con Flexbox y flex-wrap para garantizar que las tarjetas se adapten a distintas resoluciones de pantalla. -->
         <section id="tarjetas">
-            <h2>Proyectos Destacados</h2>
+            <h2 class="titulo-seccion">proyectos_destacados</h2>
             <div class="contenedor-proyectos-canva">
 
                 <article class="card-proyecto proyecto-violeta">
                     <div class="icono-card">
-                        <img src="img/icono-code.png" alt="Icono Objetivo">
+                        <i class="fa-solid fa-code"></i>
                     </div>
                     <div class="contenido-card">
-                        <h3>Pago de Haberes</h3>
+                        <h3>pago_de_haberes</h3>
                         <ul>
-                            <li>Desarrollo end-to-end de un sistema de procesamiento
-                                masivo de archivos para alta de cuentas sueldo
-                                mediante Java 8</li>
+                            <li>Desarrollo end-to-end de un sistema de procesamiento masivo de archivos para alta de cuentas sueldo mediante Java 8</li>
                             <li>Optimización de procesos internos bancarios -> BPM</li>
-                            <li>Integración y orquestación de servicios bancarios con
-                                BPM, asegurando trazabilidad y reglas de negocio.
-                                Implementación de REST APIs (Spring Boot) y frontend
-                                en Angular para el módulo de bancarización.</li>
+                            <li>Integración y orquestación de servicios bancarios con BPM. REST APIs (Spring Boot) y frontend en Angular.</li>
                         </ul>
                     </div>
                 </article>
 
                 <article class="card-proyecto proyecto-rosa">
                     <div class="icono-card">
-                        <img src="img/icono-code2.png" alt="Icono Ojo">
+                        <i class="fa-solid fa-bug-slash"></i>
                     </div>
                     <div class="contenido-card">
-                        <h3>Motor de Calificaciones</h3>
+                        <h3>motor_de_calificaciones</h3>
                         <ul>
-                            <li>Mantenimiento evolutivo y resolución de incidencias en
-                                el motor de calificaciones online.</li>
-                            <li>Optimización de interfaces en Angular y ajustes de
-                                lógica backend con Java 8 / Spring Boot.</li>
-                            <li> Resolución de errores críticos (Hotfixes) en entornos de
-                                producción.</li>
+                            <li>Mantenimiento evolutivo y resolución de incidencias en el motor de calificaciones online.</li>
+                            <li>Optimización de interfaces en Angular y ajustes de lógica backend con Java 8 / Spring Boot.</li>
+                            <li>Resolución de errores críticos (Hotfixes) en entornos de producción.</li>
                         </ul>
                     </div>
                 </article>
@@ -102,74 +125,93 @@
         </section>
 
         <section id="habilidades">
-            <h2>Habilidades & Hobbies</h2>
-            <!-- Listado de Habilidades: Elementos de lista estilizados como botones físicos con transiciones de transformación al pasar el mouse. -->
-            <ul class="skills-list">
-                <li class="skill-tag tag-purple">Java</li>
-                <li class="skill-tag tag-pink">Spring Boot</li>
-                <li class="skill-tag tag-lime">Oracle</li>
-                <li class="skill-tag tag-cyan">Angular</li>
-                <li class="skill-tag tag-purple">SQL</li>
-                <li class="skill-tag tag-pink">Git</li>
-                <li class="skill-tag tag-lime">Guitarra</li>
-                <li class="skill-tag tag-purple">Cantante</li>
-            </ul>
+            <h2 class="titulo-seccion">skills_&_hobbies</h2>
+
+            <!-- Uso de la etiqueta semántica table para estructurar de forma clara y accesible el stack tecnológico -->
+            <table class="tabla-tech">
+                <thead>
+                    <tr>
+                        <th>tecnología_</th>
+                        <th>nivel_</th>
+                        <th>área_</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java (Spring Boot)</td>
+                        <td>Avanzado</td>
+                        <td>Backend / APIs</td>
+                    </tr>
+                    <tr>
+                        <td>Angular</td>
+                        <td>Intermedio</td>
+                        <td>Frontend</td>
+                    </tr>
+                    <tr>
+                        <td>Oracle / SQL</td>
+                        <td>Avanzado</td>
+                        <td>Bases de Datos</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
-        <section id="contacto">
-            <h2>¡Hablemos!</h2>
-            <!-- Formulario de contacto: Uso de atributos required en los inputs para aplicar validación nativa y obligatoria desde el navegador HTML5. -->
-            <form>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <input type="tel" id="tel" name="tel" placeholder="Teléfono" required>
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </section>
-
-        <!-- Grilla de películas: Implementación de CSS Grid con auto-fit para responsividad automática -->
         <section id="peliculas">
-            <h2>Top 3 Mejores Películas</h2>
+            <h2 class="titulo-seccion">top_3_movies</h2>
             <div class="contenedor-tarjetas">
-                <article class="proyecto-card">
-                    <h3>Twelve Monkeys</h3>
-                    <img src="img/peli1.jpg" alt="Poster de Twelve Monkeys">
-                    <p>Un rompecabezas temporal brillante.</p>
-                </article>
-                <article class="proyecto-card">
-                    <h3>Fight Club</h3>
-                    <img src="img/peli2.jpg" alt="Poster de Fight Club">
-                    <p>Crítica ácida al consumismo con una estética visual cruda y directa.</p>
-                </article>
-                <article class="proyecto-card">
-                    <h3>Fear and loathing in Las Vegas</h3>
-                    <img src="img/peli3.jpg" alt="Poster de Fear and loathing in Las Vegas">
-                    <p>Un viaje psicodélico y visualmente disruptivo que rompe con todas las reglas.</p>
-                </article>
+                
+                <a href="https://www.themoviedb.org/movie/63-twelve-monkeys" target="_blank" class="enlace-card">
+                    <article class="proyecto-card">
+                        <h3>twelve_monkeys</h3>
+                        <img src="img/peli1.jpg" alt="Poster de la película Twelve Monkeys">
+                        <p>Un rompecabezas temporal brillante.</p>
+                    </article>
+                </a>
+
+                <a href="https://www.themoviedb.org/movie/550-fight-club" target="_blank" class="enlace-card">
+                    <article class="proyecto-card">
+                        <h3>fight_club</h3>
+                        <img src="img/peli2.jpg" alt="Poster de la película Fight Club">
+                        <p>Crítica ácida al consumismo con una estética visual cruda.</p>
+                    </article>
+                </a>
+
+                <a href="https://www.themoviedb.org/movie/1878-fear-and-loathing-in-las-vegas" target="_blank" class="enlace-card">
+                    <article class="proyecto-card">
+                        <h3>fear_and_loathing</h3>
+                        <img src="img/peli3.jpg" alt="Poster de la película Fear and loathing in Las Vegas">
+                        <p>Un viaje psicodélico que rompe todas las reglas.</p>
+                    </article>
+                </a>
+
             </div>
+        </section>
+
+        <!-- Formulario de contacto. Los campos input tienen estilos personalizados y el atributo 'required' para validación básica en el frontend. -->
+        <section id="contacto">
+            <h2 class="titulo-seccion">¡hablemos!</h2>
+            <form>
+                <input type="text" id="nombre" name="nombre" placeholder="nombre_" required>
+                <input type="text" id="apellido" name="apellido" placeholder="apellido_" required>
+                <input type="email" id="email" name="email" placeholder="email_" required>
+                <input type="tel" id="tel" name="tel" placeholder="teléfono_" required>
+                <button type="submit">enviar_mensaje</button>
+            </form>
         </section>
 
     </main>
 
     <footer>
         <div class="contenedor-footer">
-            <p>Encontrame en mis redes:</p>
+            <p>encuéntrame_en:</p>
             <div class="redes-sociales">
-                <a href="https://github.com/ayecristi" target="_blank" class="social-icon">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/ayelen-cristi/" target="_blank" class="social-icon">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com/misterioso.chocolate" target="_blank" class="social-icon">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                <a href="https://github.com/ayecristi" target="_blank" class="social-icon icon-lime"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/ayelen-cristi/" target="_blank" class="social-icon icon-purple"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://instagram.com/misterioso.chocolate" target="_blank" class="social-icon icon-pink"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <p class="copyright">Ayelén &copy; 2026 - Hecho con código y rock.</p>
+            <p class="copyright">ayelén © 2026 - hecho_en_rosario</p>
         </div>
     </footer>
 
 </body>
-
 </html>
