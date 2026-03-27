@@ -22,7 +22,7 @@ Este proyecto consiste en el desarrollo de un portafolio personal interactivo de
 - [x] Proyecto subido al repositorio.
 - [x] Proyecto publicado utilizando GitHub Pages.
 - [x] URL Repositorio: https://github.com/ayecristi/PFO1
-- [x] URL Vercel: *(Nota: verificá que esta sea tu URL en vivo)*
+- [x] URL Vercel: https://pfo-1-git-main-ayecristis-projects.vercel.app/
 
 #### • Uso de Google Fonts:
 - [x] Enlace a Google Fonts incluido en la sección "head" del HTML.
